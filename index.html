@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="favicon.ico"
-    <script src="https://kit.fontawesome.com/c70c67b49d.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/c70c67b49d.js" crossorigin="anonymous" defer></script>
     <script src="code.js" defer></script>
 </head>
 <body>
@@ -20,7 +19,7 @@
             <div class="bar">
                 <div class="function" onclick="clearAll();">AC</div>
                 <div class="function" onclick="switchSign();">+/-</div>
-                <div class="function">%</div>
+                <div class="function" onclick="percentOperator()">%</div>
                 <div class="operand" onclick="appendVisible('/')">/</div>
             </div>
             <div class="bar">
@@ -52,7 +51,7 @@
 
     <div class="footer">Copyright © ArtToVideoGames 
         <script>document.write(new Date().getFullYear())</script>
-        <a href="https://github.com/arttovideogames" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a id="icon" href="https://github.com/arttovideogames" target="_blank"><i id="ico" class="fa-brands fa-github fa-xl"></i></a>
     </div>
 </body>
 </html>
