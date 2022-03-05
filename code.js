@@ -2,6 +2,7 @@ let num1 = 0;
 let operator = 0;
 let num2 = 0;
 let solution = 0;
+let equated = false;
 
 let number = document.getElementById('numberInFunction');
 let functionBar = document.getElementById('functionBar');
@@ -157,6 +158,7 @@ function equate()
     solution = operate();
     number.textContent = solution;
     functionBar.textContent = solution;
+    equated = true;
 }
 
 function clearAll() 
@@ -167,6 +169,7 @@ function clearAll()
     solution = 0;
     number.textContent = "";
     functionBar.textContent = "";
+    equated = false;
 }
 
 function switchSign() 
@@ -201,6 +204,11 @@ function backSpace()
 
 function appendVisible(variable) 
 {
+    if(equated == true) 
+    {
+        clearAll();
+    }
+
     let functionArray = functionBar.textContent.split(" ");
 
     if(variable == "." && number.textContent.includes('.')) 
