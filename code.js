@@ -5,6 +5,17 @@ let solution = 0;
 
 let number = document.getElementById('numberInFunction');
 let functionBar = document.getElementById('functionBar');
+let icon = document.getElementById('ico');
+
+icon.addEventListener('mouseover', function(event) 
+{ 
+    event.target.className = "fa-brands fa-github fa-xl fa-shake";
+})
+
+icon.addEventListener('mouseleave', function(event) 
+{ 
+    event.target.className = "fa-brands fa-github fa-xl";
+})
 
 number.textContent = "";
 functionBar.textContent = "";
@@ -40,6 +51,37 @@ function operate()
             console.log(num1 / num2);
             return num1 / num2;
         }
+    }
+}
+
+function percentOperator() 
+{
+    let functionArray = functionBar.textContent.split(" ");
+    let percent = number.textContent;
+
+    let length = functionArray.length
+
+
+    if(length == 1) 
+    {
+        functionBar.textContent = "";
+    }
+    else if(length== 3) 
+    {
+        functionArray.splice(2, 1);
+        functionBar.textContent = functionArray.join(" ");
+    }
+
+    number.textContent = '';
+    percent = percent / 100;
+
+    if(length == 1) 
+    {
+        appendVisible(percent);
+    }
+    else if(length == 3) 
+    {
+        appendVisible(" " + percent);
     }
 }
 
@@ -124,6 +166,11 @@ function appendVisible(variable)
     }
     else 
     {
+        if(number.textContent.length >= 9) 
+        {
+            return;
+        }
+
         number.textContent = number.textContent + variable;
         functionBar.textContent = functionBar.textContent + variable;
     }
