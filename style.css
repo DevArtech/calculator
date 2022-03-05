@@ -15,15 +15,19 @@ body {
     transform: translate(-50%, -50%);
     outline: 2px solid #080808;
     border-radius: 10px;
+    box-shadow: 5px 5px 2.5px black;
 }
 
 #calcOut {
     background-color: #c5c5c5;
     width: 95%;
     height: 115px;
-    margin: -10px 10px;
+    margin: 10px 10px;
+    margin-bottom: -20px;
     outline: 2px solid #080808;
     border-radius: 5px;
+    overflow-wrap: break-word;
+    overflow: auto;
 }
 
 #calcOut > h1 {
@@ -35,12 +39,12 @@ body {
 }
 
 #calcOut > h2 {
-    font-size: 25px;
+    font-size: 20px;
     text-align: right;
     font-weight: 300;
-    height: 50px;
-    line-height: 50px;
+    line-height: 35px;
     margin-right: 10px;
+    overflow: hidden;
 }
 
 .buttons {
@@ -122,4 +126,18 @@ body {
     bottom: 0;
     position: fixed;
     margin-bottom: 25px;
+    font-size: 17px;
+}
+
+#icon {
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+    height: 100%;
+    line-height: 100%;
+    transition: .2s font-size ease-in-out;
+}
+
+#icon:hover {
+    font-size: 22px;
 }
