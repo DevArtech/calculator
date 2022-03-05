@@ -6,46 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico"
+    <script src="https://kit.fontawesome.com/c70c67b49d.js" crossorigin="anonymous"></script>
+    <script src="code.js" defer></script>
 </head>
 <body>
     <div class="calcBody">
         <div id="calcOut">
-            <h1>Numbers</h1>
+            <h2 id="functionBar">Function</h2>
+            <h1 id="numberInFunction">Numbers</h1>
         </div>
         <div class="buttons">
             <div class="bar">
-                <div class="function">AC</div>
-                <div class="function">+/-</div>
+                <div class="function" onclick="clearAll();">AC</div>
+                <div class="function" onclick="switchSign();">+/-</div>
                 <div class="function">%</div>
-                <div class="operand">/</div>
+                <div class="operand" onclick="appendVisible('/')">/</div>
             </div>
             <div class="bar">
-                <div class="number">9</div>
-                <div class="number">8</div>
-                <div class="number">7</div>
-                <div class="operand">*</div>
+                <div class="number" onclick="appendVisible('9');">9</div>
+                <div class="number" onclick="appendVisible('8');">8</div>
+                <div class="number" onclick="appendVisible('7');">7</div>
+                <div class="operand" onclick="appendVisible('*');">*</div>
             </div>
             <div class="bar">
-                <div class="number">6</div>
-                <div class="number">5</div>
-                <div class="number">4</div>
-                <div class="operand">-</div>
+                <div class="number" onclick="appendVisible('6');">6</div>
+                <div class="number" onclick="appendVisible('5');">5</div>
+                <div class="number" onclick="appendVisible('4');";>4</div>
+                <div class="operand" onclick="appendVisible('-');">-</div>
             </div>
             <div class="bar">
-                <div class="number">3</div>
-                <div class="number">2</div>
-                <div class="number">1</div>
-                <div class="operand">+</div>
+                <div class="number" onclick="appendVisible('3');">3</div>
+                <div class="number" onclick="appendVisible('2');">2</div>
+                <div class="number" onclick="appendVisible('1');">1</div>
+                <div class="operand" onclick="appendVisible('+');">+</div>
             </div>
             <div class="bar">
-                <div class="number">0</div>
-                <div class="number">.</div>
-                <div class="function">&lt;</div>
-                <div class="operand">=</div>
+                <div class="number" onclick="appendVisible('0');">0</div>
+                <div class="number" onclick="appendVisible('.');">.</div>
+                <div class="function" onclick="backSpace()">&lt;</div>
+                <div class="operand" onclick="equate();">=</div>
             </div>
         </div>
     </div>
 
-    <script src="code.js"></script>
+    <div class="footer">Copyright © ArtToVideoGames 
+        <script>document.write(new Date().getFullYear())</script>
+        <a href="https://github.com/arttovideogames" target="_blank"><i class="fa-brands fa-github"></i></a>
+    </div>
 </body>
 </html>
