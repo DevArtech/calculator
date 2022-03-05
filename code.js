@@ -7,6 +7,68 @@ let number = document.getElementById('numberInFunction');
 let functionBar = document.getElementById('functionBar');
 let icon = document.getElementById('ico');
 
+window.addEventListener('keydown', (event) =>
+{
+    if(event.key === '1') 
+    {
+        appendVisible('1');
+    }
+    else if(event.key === '2') {
+        appendVisible('2');
+    }
+    else if(event.key === '3') {
+        appendVisible('3');
+    }
+    else if(event.key === '4') {
+        appendVisible('4');
+    }
+    else if(event.key === '5') {
+        appendVisible('5');
+    }
+    else if(event.key === '6') {
+        appendVisible('6');
+    }
+    else if(event.key === '7') {
+        appendVisible('7');
+    }
+    else if(event.key === '8') {
+        appendVisible('8');
+    }
+    else if(event.key === '9') {
+        appendVisible('9');
+    }
+    else if(event.key === '0') {
+        appendVisible('0');
+    }
+    else if(event.key === '=') {
+        equate();
+    }
+    else if(event.key === 'Backspace') {
+        backSpace();
+    }
+    else if(event.key === '*') {
+        appendVisible('*');
+    }
+    else if(event.key === '+') {
+        appendVisible('+');
+    }
+    else if(event.key === '-') {
+        appendVisible('-');
+    }
+    else if(event.key === '/') {
+        appendVisible('/');
+    }
+    else if(event.key === '%') {
+        percentOperator();
+    }
+    else if(event.key === '.') {
+        appendVisible('.');
+    }
+    else if(event.key === 'Enter') {
+        equate();
+    }
+});
+
 icon.addEventListener('mouseover', function(event) 
 { 
     event.target.className = "fa-brands fa-github fa-xl fa-shake";
