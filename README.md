@@ -1,3 +1,3 @@
 # calculator
 Calculator Project for Odin  
-Live Preview: https://arttovideogames.github.io/calculator/  
+Live Preview: https://devartech.github.io/calculator/  
